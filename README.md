@@ -5,7 +5,7 @@ This project is a web interface that allows users to upload an image of their ur
 
 ### Sample Images
 
-![Home Page](home_page.jpg)
+![Home Page](home_page.png)
 
 ![Color Identification](color_identification.png)
 
