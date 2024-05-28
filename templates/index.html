@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URINE STRIP TESTER</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h2>URINE STRIP TESTER</h2>
+        <form method="post" action="{% url 'upload_urine_strip' %}" enctype="multipart/form-data" id="uploadForm">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Urine strip picture</label>
+                <input class="form-control" type="file" id="formFile" name="urine_strip" onchange="enableSubmit()">
+            </div>
+            <button type="submit" class="btn btn-primary" id="submitButton" disabled>Upload</button>
+        </form>
+        <h2>{{ message }}</h2>
+        <h2>Result: {{ result }}</h2>
+    </div>
+    
+    <script>
+        function enableSubmit() {
+            var fileInput = document.getElementById('formFile');
+            var submitButton = document.getElementById('submitButton');
+            
+            // Check if a file is selected
+            if (fileInput.files.length > 0) {
+                submitButton.disabled = false; // Enable the submit button
+            } else {
+                submitButton.disabled = true; // Disable the submit button if no file is selected
+            }
+        }
+    </script>    
+</body>
+</html>
