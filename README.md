@@ -5,7 +5,7 @@ This project is a web interface that allows users to upload an image of their ur
 
 ### Sample Images
 
-![Home Page](home_page.jpg)
+![Home Page](home_page.png)
 
 ![Color Identification](color_identification.png)
 
@@ -22,20 +22,21 @@ This project is a web interface that allows users to upload an image of their ur
 ### Installation
 1. Clone the repository from GitHub:
    ```
-   git clone <repository_url>
+   git clone https://github.com/dhruvkej9/projectInternship
    ```
-
-2. Install Python dependencies:
+2. Locate to the project directory
+   ```
+   cd projectInternship
+   ```  
+3. Install Python dependencies:
    ```
    pip install -r requirements.txt
    ```
-
-3. Start the Django development server:
+4. Start the Django development server:
    ```
    python manage.py runserver
    ```
-
-4. Access the web interface in your browser at `http://127.0.0.1:8000`.
+5. Access the web interface in your browser at `http://127.0.0.1:8000`.
 
 ### Usage
 1. Navigate to the web interface.
